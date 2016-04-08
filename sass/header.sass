@@ -1,0 +1,106 @@
+.header
+    position: relative
+    min-height: 620px
+    background-image: url(../img/header_bg.jpg)
+    background-size: cover
+    background-position: center
+    &::before
+        @extend .before
+        background-color: #394b5f
+        opacity: .85
+
+.header-line
+    padding-top: 45px
+    min-height: 160px
+    background-image: url(../img/top_gradient.png)
+    background-repeat: repeat-x
+
+.logo
+    opacity: .9
+
+.logo__img
+    width: 100px
+
+.navigation
+    font-size: em(15px)
+
+.navigation__list
+    @extend .ul_style
+
+.navigation__item
+    display: inline-block
+    padding: 0 10px
+    line-height: 48px
+
+.navigation__link
+    text-decoration: none
+    color: #fff
+    transition: all .5s ease
+    &_current
+        color: $main-color
+        text-decoration: underline
+    &:hover
+        color: $main-color
+        text-decoration: underline
+
+.phone
+    position: relative
+
+.phone__number
+    opacity: 0.9
+    color: #fff
+    font-family: "RobotoBold", $helvetica
+    font-size: em(20px)
+    line-height: 48px
+    text-align: right
+    white-space: nowrap
+
+.toggle-navigation
+    display: block
+    float: right
+    position: absolute
+    right: 0
+    top: 0
+    width: 28px
+    height: 28px
+    margin-top: 14px
+    text-align: center
+    line-height: 48px
+
+.toggle-navigation span:after,
+.toggle-navigation span:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+.toggle-navigation span:after
+    top: 18px
+
+.toggle-navigation span
+    position: relative
+    display: block
+
+.toggle-navigation span,
+.toggle-navigation span:after,
+.toggle-navigation span:before
+    width: 100%
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+
+.toggle-navigation.on span
+    background-color: transparent
+
+.toggle-navigation.on span:before
+    transform: rotate(45deg) translate(-1px, 0px)
+
+.toggle-navigation.on span:after
+    transform: rotate(-45deg) translate(6px, -7px)
+
+.toggle-navigation.on + #menu
+    opacity: 1
+    visibility: visible
