@@ -1,6 +1,7 @@
 .header
     position: relative
     min-height: 620px
+    margin-bottom: 105px
     background-image: url(../img/header_bg.jpg)
     background-size: cover
     background-position: center
@@ -87,7 +88,7 @@
     width: 100%
     height: 2px
     background-color: #fff
-    transition: all 0.3s
+    transition: all 0.3s ease
     backface-visibility: hidden
     border-radius: 2px
 
@@ -104,3 +105,108 @@
 .toggle-navigation.on + #menu
     opacity: 1
     visibility: visible
+
+.intro
+    margin-top: 40px
+
+.intro__title
+    margin-top: 110px
+    color: #fff
+    border-bottom: $main-color 8px solid
+    display: inline-block
+    padding-bottom: 8px
+
+.intro__list
+    @extend .ul_style
+    margin-top: 10px
+
+.intro__item
+    display: block
+    font-family: "RalewaySemiBold", $helvetica
+    font-size: 18px
+    position: relative
+    margin-bottom: 12px
+    padding-left: 16px
+    &::before
+        content: ''
+        display: block
+        width: 6px
+        height: 11px
+        +triangle(12px, $main-color, right)
+        position: absolute
+        top: 4px
+        left: 0
+
+.intro__link
+    text-decoration: none
+    color: #fff
+    transition: all 0.5s
+    &:hover
+        text-decoration: underline
+
+.form
+    background-color: transparentize(#243343, .2)
+    padding: 35px 35px 30px
+    color: #97a4b2
+    font-size: em(14px)
+    border-bottom: #1A222B 4px solid
+    .form__title
+        color: #fff;
+        font-family: "PFCentroSlabProMedium", $helvetica
+        font-size: em(33px)
+        text-transform: none
+        margin: 0
+    .form__subtitle
+        line-height: em(23px)
+        margin-top: 10px
+    label
+        margin-top: 20px
+        margin-bottom: 15px
+        display: block
+        span
+            letter-spacing: 1.5px
+            display: block
+            margin-bottom: 6px
+            color: #778390
+    input
+        display: block
+        width: 100%
+        border: none
+        box-shadow: 0 -3px #1F2A36
+        background-color: #34465A
+        text-indent: 10px
+        padding: 10px 0
+        transition: all .5s ease
+        color: #fff
+        font-family: "PFCentroSlabProMedium", $helvetica
+        font-size: em(20px)
+        &:focus
+            box-shadow: 0 -5px $main-color
+            background-color: #394E65
+
+.btn
+    display: block
+    width: 100%
+    margin: 0 auto
+    border: none
+    background-color: $main-color
+    color: #111
+    font-family: "PFCentroSlabProBold", $helvetica
+    font-size: em(22px)
+    padding: 12px 30px
+    border-bottom: #B97200 3px solid
+    transition: all .5s ease
+    text-decoration: none
+    border-radius: 2px
+
+    &:hover
+        background-color: #FFB338
+        text-decoration: none
+        color: #111
+    &:active
+        background-color: #DB8C0E
+        text-decoration: none
+        color: #111
+    &:focus
+        color: #111
+        text-decoration: none
