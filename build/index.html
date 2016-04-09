@@ -16,7 +16,7 @@
     <!-- Fonts Loader from _fonts.css (HTML5 LocalStorage) -->
     <script>!function(){function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===e}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(o))a(localStorage.font_css_cache);else{var n=new XMLHttpRequest;n.open("GET",o,!0),e(n,"load",function(){4===n.readyState&&(a(n.responseText),localStorage.font_css_cache=n.responseText,localStorage.font_css_cache_file=o)}),n.send()}else{var c=document.createElement("link");c.href=o,c.rel="stylesheet",c.type="text/css",document.getElementsByTagName("head")[0].appendChild(c),document.cookie="font_css_cache"}}function a(e){var t=document.createElement("style");t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t)}var o="_fonts.min.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}();</script>
     <!-- Load CSS Compilled without JS -->
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.min.css">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,25 +27,21 @@
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png"> -->
 </head>
 <body>
-
     <header class="header">
-        <div class="header-line">
+        <div class="headline">
             <div class="container">
                 <div class="row">
-
                    <div class="col-md-3 col-sm-6 col-xs-3">
                         <div class="logo">
-                            <a href="#" class="logo__link"><img class="logo__img" src="../img/logo.svg" alt="Armata Financical Group"></a>
+                            <a href="#" class="logo__link"><img class="logo__img" src="img/logo.svg" alt="Armata Financical Group"></a>
                         </div>
                     </div>
-
                     <div class="col-lg-2 col-md-9 col-sm-6 col-xs-9 col-lg-push-7">
                         <div class="phone">
                             <div class="phone__number">+38 (096) 64-76-66</div>
                             <a class="toggle-navigation hidden-lg "><span></span></a>
                         </div>
                     </div>
-
                     <div class="col-lg-7 col-md-12 col-lg-pull-2">
                         <nav class="navigation">
                             <ul class="navigation__list">
@@ -58,11 +54,9 @@
                             </ul>
                         </nav>
                     </div>
-
                 </div>
             </div>
         </div>
-
         <div class="intro">
             <div class="container">
                 <div class="row">
@@ -81,11 +75,11 @@
                             <h4 class="form__title">Заявка:</h4>
                             <p class="form__subtitle">Оставьте заявку и мы свяжемся с вами в течение 15 минут в рабочее время с 10:00 до 18:00 c пн-пт.</p>
                             <label>
-                                <span class="form__name">Ваше имя:</span>
+                                <span class="form__label">Ваше имя:</span>
                                 <input type="text" name="name" required>
                            </label>
                             <label>
-                                <span class="form__phone">Ваш телефон:</span>
+                                <span class="form__label">Ваш телефон:</span>
                                 <input type="text" name="phone" required>
                             </label>
                             <button class="btn">Отправить</button>
@@ -94,8 +88,12 @@
                 </div>
             </div>
         </div>
+        <div class="arrow">
+            <div class="arrow__btn"></div>
+        </div>
+    </header>
 
-</header>
+    <section></section>
 <!-- Load Scripts -->
 <script>var scr = {"scripts":[
     {"src" : "libs/modernizr/modernizr.js", "async" : false},

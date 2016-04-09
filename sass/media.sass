@@ -1,19 +1,20 @@
-// /*==========  Desktop First Method  ==========*/
+/*==========  Desktop First Method  ==========*/
 
-// /* Large Devices, Wide Screens */
+/* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
     .navigation
         display: none
         float: right
         min-width: 295px
-        background-color: #2c343c
-        margin-top: 10px
+        text-align: right
+        background-color: #1C242C
+        top: 10px
         position: relative
         border-bottom: #111821 4px solid
         border-top: #232D3B 4px solid
         position: absolute
         right: 15px
-        z-index: 10
+        z-index: 2
 
     .navigation__item
         display: block
@@ -24,17 +25,21 @@
         display: block
         line-height: 48px
         padding: 0 20px
-        background-color: transparent
         font-size: em(18px)
-        text-tranform: uppercase
+        text-decoration: none
+        text-transform: uppercase
+        transition: all .5s ease
+        background-color: transparent
+        border-bottom: #222C36 1px solid
         &:hover
             background-color: #34465a
+            text-decoration: none
 
     .phone__number
         padding-right: 65px
 
 
-// /* Medium Devices, Desktops */
+/* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
     .navigation
         top: 40px
@@ -45,11 +50,11 @@
     .intro__title
          margin-top: 0
 
-// /* Small Devices, Tablets */
+/* Small Devices, Tablets */
 // @media only screen and (max-width : 768px)
 
 
-// /* Extra Small Devices, Phones */
+/* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
     .phone__number
         font-size: em(18px)

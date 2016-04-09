@@ -2,6 +2,7 @@
     position: relative
     min-height: 620px
     margin-bottom: 105px
+    padding-bottom: 120px
     background-image: url(../img/header_bg.jpg)
     background-size: cover
     background-position: center
@@ -10,7 +11,7 @@
         background-color: #394b5f
         opacity: .85
 
-.header-line
+.headline
     padding-top: 45px
     min-height: 160px
     background-image: url(../img/top_gradient.png)
@@ -125,20 +126,20 @@
 
 .intro__item
     display: block
-    font-family: "RalewaySemiBold", $helvetica
-    font-size: 18px
     position: relative
     margin-bottom: 12px
     padding-left: 16px
+    font-family: "RalewaySemiBold", $helvetica
+    font-size: 18px
     &::before
         content: ''
         display: block
-        width: 6px
-        height: 11px
-        +triangle(12px, $main-color, right)
         position: absolute
         top: 4px
         left: 0
+        width: 6px
+        height: 11px
+        +triangle(12px, $main-color, right)
 
 .intro__link
     text-decoration: none
@@ -148,11 +149,11 @@
         text-decoration: underline
 
 .form
-    background-color: transparentize(#243343, .2)
     padding: 35px 35px 30px
     color: #97a4b2
     font-size: em(14px)
     border-bottom: #1A222B 4px solid
+    background-color: transparentize(#243343, .2)
 
 .form__title
     color: #fff
@@ -169,11 +170,12 @@ label
     margin-top: 20px
     margin-bottom: 15px
     display: block
-    span
-        letter-spacing: 1.5px
-        display: block
-        margin-bottom: 6px
-        color: #778390
+
+.form__label
+    letter-spacing: 1.5px
+    display: block
+    margin-bottom: 6px
+    color: #778390
 
 input
     display: block
@@ -216,3 +218,20 @@ input
     &:focus
         color: #111
         text-decoration: none
+
+.arrow
+    position: relative
+    z-index: 2
+    top: 50px
+    text-align: center
+
+.arrow__btn
+    display: inline-block
+    width: 40px
+    height: 40px
+    background-image: url(../img/arrow_btn.png)
+    cursor: pointer
+    opacity: .7
+    transition: all .25s ease
+    &:hover
+        opacity: 1
