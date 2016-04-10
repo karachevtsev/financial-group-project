@@ -1,0 +1,39 @@
+.deals__content
+    text-align: center
+
+.deals__item
+    display: inline-block
+    float: none
+    padding: 0 15px
+    width: 185px
+    padding-bottom: 60px
+    cursor: pointer
+    transition: all .5s ease
+    &:hover
+        transform: translateY(-10px)
+        color: $main-color
+
+.deals__item-image
+    max-width: 75px
+    max-height: 60px
+    width: auto
+    margin-bottom: 50px
+
+.deals__item-description
+    position: relative
+    text-decoration: underline
+    font-family: "RalewayBold", $helvetica
+    font-size: em(14px)
+    line-height: em(20px)
+    &:hover
+        text-decoration: none
+
+    &::before
+        content: ''
+        position: absolute
+        top: -20px
+        left: 50%
+        width: 58px
+        height: 1px
+        background-color: $main-color
+        transform: translate(-50%, 0)
