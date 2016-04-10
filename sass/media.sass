@@ -50,9 +50,37 @@
     .intro__title
          margin-top: 0
 
-/* Small Devices, Tablets */
-// @media only screen and (max-width : 768px)
+    .services
+        text-align: center
 
+    .services__triangle
+        background-size: cover
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+    .section__subitle
+        margin-bottom: 30px
+
+    .item__info
+        padding-left: 0
+        max-width: 100%
+        margin-top: 20px
+        margin-bottom: 20px
+        &:first-child
+            margin-top: 0
+
+    .services__content_bg
+            background-position: bottom
+
+    .services__content_bottom
+        .services__item:nth-child(2)
+            .item__info
+                margin-top: 0
+
+    .services__content_bottom
+        .services__item:nth-child(1)
+            .item__info
+                margin-top: 45px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -67,7 +95,6 @@
 
     .logo__img
         width: 70px
-
 
 // /* Custom, iPhone Retina */
 // @media only screen and (max-width : 320px)
