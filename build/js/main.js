@@ -17,4 +17,19 @@ $(document).ready(function() {
         // console.log('it works')
     });
 
+
+     $('.offer').waypoint(function() {
+        console.log('it works')
+        $('.offer__item').each(function(index) {
+            console.log(index);
+            setTimeout(function() {
+                var myAnimation = new DrawFillSVG ({
+                    elementId: 'offer-svg-' + index
+                });
+            }, 500*index);
+        });
+
+     });
+
+
 });
