@@ -83,3 +83,33 @@
     .services__item:nth-child(2)
         .item__info
             margin-top: 95px
+
+.services__content_dark
+    @extend .services__content_bg
+    position: relative
+    min-height: 850px
+    padding-bottom: 20px
+    padding-top: 62px
+    background-color: #2C3949
+    background-image: url(../img/accountancy_bg.png)
+
+.services__content_dark
+    .services__item
+        &:nth-child(2)
+            .item__info
+                margin-top: 0px
+        &:nth-child(4), &:nth-child(6)
+            .item__info
+                margin-top: 120px
+        &:nth-child(4)
+            .item__info
+                margin-left: -35px
+        &:nth-child(6)
+            .item__info
+                margin-left: 45px
+        &:nth-child(8)
+            .item__info
+                margin-top: 190px
+        &:nth-child(7), &:nth-child(9)
+            .item__info
+                margin-top: 100px
