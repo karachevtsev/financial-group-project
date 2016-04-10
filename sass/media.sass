@@ -63,7 +63,34 @@
     .services__triangle
         background-size: cover
 
+    .services__content_dark
+        background-image: none
 
+    .none-d
+        display: none
+
+    .services__content_dark
+        min-height: 650px
+        padding-top: 0
+        .services__item
+            &:nth-child(2)
+                .item__info
+                    margin-top: 48px
+            &:nth-child(4), &:nth-child(6)
+                .item__info
+                    margin-top: 0px
+            &:nth-child(4)
+                .item__info
+                    margin-left: 0px
+            &:nth-child(6)
+                .item__info
+                    margin-left: 0px
+            &:nth-child(8)
+                .item__info
+                    margin-top: 0px
+            &:nth-child(7), &:nth-child(9)
+                .item__info
+                    margin-top: 0px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -90,6 +117,13 @@
         .services__item:nth-child(1)
             .item__info
                 margin-top: 45px
+
+    .services__content_dark
+        text-align: center
+        .services__item
+            &:nth-child(2)
+                .item__info
+                    margin-top: 0
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
