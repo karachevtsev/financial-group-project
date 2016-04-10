@@ -1,25 +1,38 @@
 .advantages__content
     text-align: center
 
+.card__wrap
+    perspective: 600px
+
 .card__item
     display: inline-block
     text-align: center
-    width: 260px
-    background-color: #2C3949
+    padding: 54px 28px 48px
     margin: 0 12px 30px
-    color: #97a4b2
+    width: 260px
     font-size: em(15px)
     line-height: em(21px)
-    padding: 54px 28px 48px
+    color: #97a4b2
     vertical-align: top
     border-bottom: #1A222B 4px solid
+    background-color: #2C3949
+    transition: all 1s ease
+    &_rotate-on
+        opacity: 1
+    &_rotate-off
+        transform: rotateY(100deg)
+        opacity: 0
+    &:hover
+        border-color: $main-color
+        .card__image
+            transform: scale(1.1)
 
 .card__title
+    margin-top: 30px
+    margin-bottom: 18px
     color: #E5E5E5
     font-family: "RalewayBold", $helvetica
     font-size: em(18px)
-    margin-top: 30px
-    margin-bottom: 18px
 
 .card__description
     margin-bottom: 0
@@ -35,3 +48,5 @@
     line-height: 120px
     background-color: $main-color
     border-radius: 10em
+    transition: all .25s ease
+    // transition: all 1.2s ease
