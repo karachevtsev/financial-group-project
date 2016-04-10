@@ -1,0 +1,81 @@
+.services__content_bg
+    position: relative
+    padding-bottom: 60px
+    min-height: 550px
+    background-image: url(../img/rounds.png)
+    background-repeat: no-repeat
+    background-position: top
+
+.services__triangle
+    height: 67px
+    position: absolute
+    bottom: 0
+    width: 100%
+    background-image: url(../img/triangle.svg)
+    background-repeat: no-repeat
+    background-position: top
+    background-size: 100% 100%
+    text-align: center
+    z-index: 2
+
+.logo_section
+    margin: 0 auto
+    margin-top: 30px
+    opacity: .3
+
+.services__scalepan
+    width: 160px
+    position: absolute
+    top: -130px
+    left: 50%
+    transform: translate(-50%, 0)
+    z-index: -1
+
+
+.services__content_bottom
+    padding: 15px 0 50px
+    background-color: #394B5F
+
+.item__info
+    padding-left: 34px
+    max-width: 320px
+    line-height: em(19px)
+    margin: 48px 0
+
+.item__title
+    margin-top: 0
+    margin-bottom: 10px
+
+.item__subtitle
+    font-size: em(16px)
+    border-bottom: #DEE1E5 1px solid
+    padding-bottom: 20px
+
+.item__link
+    font-size: em(23px)
+    line-height: em(14px)
+    text-decoration: underline
+    text-transform: none
+    &:focus, &:active
+        color: $main-color
+        text-decoration: underline
+
+.item__subtitle_white
+    color: #fff
+    border-color: #546476
+    margin-bottom: 0
+
+.section__content
+    .services__item
+        &:nth-child(4), &:last-child
+            .item__info
+                margin-bottom: 0
+
+.services__item:nth-child(2)
+    .item__info
+        margin-top: 0
+
+.services__content_bottom
+    .services__item:nth-child(2)
+        .item__info
+            margin-top: 95px
