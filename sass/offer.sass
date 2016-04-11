@@ -8,19 +8,23 @@
 .offer__item
     position: relative
     display: inline-block
+    vertical-align: top
     width: 290px
     height: 128px
-    margin-left: -40px
-    vertical-align: top
+    margin-left: -44px
     cursor: default
+    transition: all .5s ease
+    &:hover
+        transform: scale(1.08)
+        z-index: 3
+        path
+            fill-opacity: 0!important
+            stroke-opacity: 1!important
     svg
         position: absolute
         top: 0
         left: 0
         z-index: 0
-
-.offer__item_lime
-    display: none
 
 .offer__item-content
     position: relative
@@ -29,6 +33,10 @@
     margin-left: 60px
     text-align: left
     padding-left: 40px
+    opacity: 0
+    transition: all 1s ease
+    &_on
+                opacity: 1
     span
         font-size: em(20px)
         margin-left: -22px

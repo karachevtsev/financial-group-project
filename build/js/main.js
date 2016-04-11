@@ -18,21 +18,22 @@ $(document).ready(function() {
     });
 
     var waypoint = new Waypoint({
-        element: $(".offer"),
+        element: $('.offer'),
         handler: function(position) {
-            if (position === "down") {
-                $(".offer__item").each(function(index) {
+            if (position === 'down') {
+                $('.offer__item').each(function(index) {
                     var animateArrow = $(this);
                     setTimeout(function() {
                         var myAnimation = new DrawFillSVG({
-                            elementId: "offer-svg-" + index
+                            elementId: 'offer-svg-' + index
                         });
-                        // animateArrow.children(".").addClass("");
+                        animateArrow.children('.offer__item-content').addClass('offer__item-content_on');
                     }, 500*index);
                 });
             };
             this.destroy();
-        }
+        },
+        offset: '35%'
     });
 
 });
