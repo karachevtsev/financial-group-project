@@ -17,19 +17,22 @@ $(document).ready(function() {
         // console.log('it works')
     });
 
-
-     $('.offer').waypoint(function() {
-        console.log('it works')
-        $('.offer__item').each(function(index) {
-            console.log(index);
-            setTimeout(function() {
-                var myAnimation = new DrawFillSVG ({
-                    elementId: 'offer-svg-' + index
+    var waypoint = new Waypoint({
+        element: $(".offer"),
+        handler: function(position) {
+            if (position === "down") {
+                $(".offer__item").each(function(index) {
+                    var animateArrow = $(this);
+                    setTimeout(function() {
+                        var myAnimation = new DrawFillSVG({
+                            elementId: "offer-svg-" + index
+                        });
+                        // animateArrow.children(".").addClass("");
+                    }, 500*index);
                 });
-            }, 500*index);
-        });
-
-     });
-
+            };
+            this.destroy();
+        }
+    });
 
 });
