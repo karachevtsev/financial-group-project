@@ -8,7 +8,7 @@
 
 .slide__foto
     display: block
-    width: 200px
+    width: 200px !important
     height: 200px
     margin: 0 auto
     border-radius: 50%
@@ -56,3 +56,18 @@
                 right: 20px
                 left: auto
                 background-position: -16px 0
+
+.slider
+    .owl-item
+        .slide__foto, .slide__title, .slide__subtitle, .slide__text
+            transition: all 1s ease
+            opacity: 0
+            transform: translate3d(200px, 0, 0)
+        .slide__title, .slide__subtitle
+            transition-delay: .4s
+        .slide__text
+            transition-delay: .8s
+        &.active
+            .slide__foto, .slide__title, .slide__subtitle, .slide__text
+                opacity: 1
+                transform: translate3d(0, 0, 0)
