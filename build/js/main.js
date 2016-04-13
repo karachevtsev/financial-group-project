@@ -1,8 +1,13 @@
 $(document).ready(function() {
 
     $('.toggle-navigation').click(function() {
-        $(this).toggleClass("on");
-        $(".navigation").slideToggle();
+        $(this).toggleClass('on');
+        $('.navigation').slideToggle();
+        return false;
+    });
+
+    $('.footer .toggle-navigation').click(function() {
+        $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
         return false;
     });
 
