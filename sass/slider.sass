@@ -1,0 +1,58 @@
+.slider
+    margin-bottom: 25px
+
+.slide
+    text-align: center
+    margin-bottom: 30px
+    position: relative
+
+.slide__foto
+    display: block
+    width: 200px
+    height: 200px
+    margin: 0 auto
+    border-radius: 50%
+    behavior: url(border-radius.htc)
+
+.slide__title
+    text-transform: none
+    font-size: em(24px)
+    margin-bottom: 7px
+
+.slide__subtitle
+    font-size: em(14px)
+    color: #6E7B8B
+
+.slide__text
+    margin-top: 18px
+
+.slider
+    .owl-controls
+        text-align: center
+        .owl-dot
+            width: 15px
+            height: 15px
+            margin: 0 3px
+            background-color: #ccc
+            display: inline-block
+            border-radius: 10em
+            &.active
+                background-color: $main-color
+        .owl-nav
+            position: absolute
+            top: 12%
+            width: 100%
+            > div
+                height: 29px
+                width: 16px
+                background-image: url(../img/slider_arrows.png)
+                position: absolute
+                left: 20px
+                opacity: .5
+                transition: all .25s ease
+                &:hover
+                    opacity: 1
+            .owl-next
+                right: 20px
+                left: auto
+                background-position: -16px 0

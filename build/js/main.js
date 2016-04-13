@@ -36,4 +36,42 @@ $(document).ready(function() {
         offset: '35%'
     });
 
+    // $('.slider').owlCarousel({
+    //     items : 1,
+    //     nav : true,
+    //     navText : "",
+    //     loop : true,
+    //     autoplay : true,
+    //     autoplayHoverPause : true,
+    //     fluidSpeed : 600,
+    //     autoplaySpeed : 600,
+    //     navSpeed : 600,
+    //     dotsSpeed : 600,
+    //     dragEndSpeed : 600
+    // });
+
+
+    $('.slider').owlCarousel({
+        loop: true, //Зацикливаем слайдер
+        margin: 10, //Отступ от картино если выводите больше 1
+        nav: true, //Отключил навигацию
+        navText : "",
+        autoplay: true, //Автозапуск слайдера
+        fluidSpeed : 600,
+        autoplayHoverPause : true,
+        smartSpeed: 1000, //Время движения слайда
+        autoplayTimeout: 2000, //Время смены слайда
+        responsive: { //Адаптация в зависимости от разрешения экрана
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    });
+
 });
