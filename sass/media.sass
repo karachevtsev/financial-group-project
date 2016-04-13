@@ -49,6 +49,15 @@
     .offer__item
         margin-bottom: 20px
 
+    .application__items
+        .deals__item
+            width: 150px
+
+    .application__content
+        .section__title:after
+            left: 13%
+
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
     .navigation
@@ -98,6 +107,18 @@
     .offer__item:nth-child(1)
         margin-left: -40px
 
+    .application__items
+        text-align: center
+        margin-bottom: 40px
+
+    .section__title_left, .section__description_left
+        text-align: center
+
+    .application__content
+        .section__title:after
+            left: 50%
+
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
     .section__subitle
@@ -139,6 +160,11 @@
 
     // .offer__item:nth-child(3)
     //     margin-left: 10px
+
+    .application__items
+        .deals__item
+            padding: 10px
+            width: 40%
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
