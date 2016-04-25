@@ -11,6 +11,11 @@
     padding-bottom: 60px
     cursor: pointer
     transition: all .5s ease
+    transform: translateY(-20px)
+    opacity: 0
+    &_on
+        opacity: 1
+        transform: translateY(0)
     &:hover
         transform: translateY(-10px)
         color: $main-color

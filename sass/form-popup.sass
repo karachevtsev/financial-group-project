@@ -1,0 +1,27 @@
+#callback
+    max-width: 340px
+    margin: auto
+    position: relative
+    .form__title
+        line-height: em(18px)
+        margin-bottom: 18px
+
+.mfp-form
+    &.mfp-wrap
+        &.mfp-ready
+            opacity: 1
+    &.mfp-bg
+        opacity: 0
+        transition: all 0.25s ease-out
+        &.mfp-ready
+            opacity: 0.8
+        &.mfp-removing
+            opacity: 0
+    &.mfp-wrap
+        .mfp-content
+            opacity: 0
+            transition: all 0.25s ease-out
+        &.mfp-ready .mfp-content
+            opacity: 1
+        &.mfp-removing .mfp-content
+            opacity: 0

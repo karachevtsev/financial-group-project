@@ -1,4 +1,4 @@
-global.hostname = "localhost";
+global.hostname = 'localhost';
 
 var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
