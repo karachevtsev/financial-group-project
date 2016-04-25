@@ -4,6 +4,7 @@ var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss    = require('gulp-minify-css'),
+    uglify       = require('gulp-uglify'),
     rename       = require('gulp-rename');
 
 gulp.task('express', function() {
@@ -43,6 +44,22 @@ gulp.task('styles', function () {
 	.pipe(gulp.dest('build/css'));
 });
 
+// gulp.task('jsbuild', function () {
+//     gulp.src('js/main.js') //Найдем наш main файл
+//         .pipe(uglify()) //Сожмем наш js
+//         .pipe(sourcemaps.write()) //Пропишем карты
+//         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
+//         .pipe(reload({stream: true})); //И перезагрузим сервер
+// });
+
+gulp.task('compress', function() {
+  return gulp.src('js/*.js')
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('build/js'));
+});
+
+
 gulp.task('watch', function() {
 	gulp.watch('sass/*.sass', ['styles']);
 	gulp.watch('build/css/*.css', notifyLiveReload);
@@ -50,6 +67,6 @@ gulp.task('watch', function() {
     gulp.watch('build/js/*.js', notifyLiveReload);
 });
 
-gulp.task('default', ['styles', 'express', 'livereload', 'watch'], function() {
+gulp.task('default', ['styles', 'compress', 'express', 'livereload', 'watch'], function() {
 
 });
